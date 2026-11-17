@@ -1,16 +1,17 @@
+
 /* ============================================================
    TAHSIN JAWAD — PORTFOLIO STYLESHEET
    Fonts: Syne (headings) + DM Sans (body)
    Theme: Dark, minimal, editorial
    ============================================================ */
 
-/* ---- CSS VARIABLES (edit these to retheme everything) ---- */
+/* ---- CSS VARIABLES ---- */
 :root {
   --bg:          #0d0d12;
   --bg-alt:      #111118;
   --surface:     #17171f;
   --border:      #2a2a38;
-  --accent:      #a78bfa;       /* violet */
+  --accent:      #a78bfa;
   --accent-dim:  #7c5cbf;
   --text:        #e8e8f0;
   --text-muted:  #7a7a95;
@@ -47,19 +48,16 @@ img { max-width: 100%; display: block; }
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 5%;
   background: rgba(13, 13, 18, 0.82);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
 
+/* TJ logo removed */
 .nav-logo {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.3rem;
-  color: var(--accent);
-  letter-spacing: 2px;
+  display: none;
 }
 
 .nav-links {
@@ -103,12 +101,12 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: calc(var(--nav-height) + 3rem) 5% 4rem;
+  padding: calc(var(--nav-height) + 2rem) 5% 2rem;
   overflow: hidden;
 }
 
@@ -507,6 +505,12 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 @media (max-width: 480px) {
   .section { padding: 4rem 5%; }
+
+  .hero {
+    min-height: 72vh;
+    padding: calc(var(--nav-height) + 1.5rem) 5% 2rem;
+  }
+
   .hero-name { font-size: 2rem; }
   .social-grid { grid-template-columns: 1fr 1fr; }
   .skills-grid { gap: 0.75rem; }
